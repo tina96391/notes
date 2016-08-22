@@ -2,9 +2,9 @@
 download tools</br>
 **Exploit Generation**</br>
 <li>Random testing</br>
---Symbolic execution</br>
+<li>Symbolic execution</br>
 Concolic execution</br>
-	.Concrete+Symbolic=Concolic</br>
+<ul>Concrete+Symbolic=Concolic</br>
 --LAB</br>
 **Z3**「聰明暴力破解」-解數學or密碼學相關題目</br>
 1.Reverse the algorthm</br>
