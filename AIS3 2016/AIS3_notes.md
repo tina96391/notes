@@ -4,8 +4,8 @@ download tools</br>
 <li>Random testing</br>
 <li>Symbolic execution</br>
 Concolic execution</br>
-<ul>Concrete+Symbolic=Concolic</br>
---LAB</br>
+<ul>Concrete+Symbolic=Concolic</br></ul>
+<li>LAB</br>
 **Z3**「聰明暴力破解」-解數學or密碼學相關題目</br>
 1.Reverse the algorthm</br>
 2.Re-implement in Python</br>
