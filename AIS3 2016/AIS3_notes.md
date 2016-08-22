@@ -3,13 +3,13 @@ download tools</br>
 **Exploit Generation**</br>
 <li>Random testing</br>
 <li>Symbolic execution</br>
-Concolic execution</br>
+<li>Concolic execution</br>
 <ul>Concrete+Symbolic=Concolic</br></ul>
 <li>LAB</br>
-**Z3**「聰明暴力破解」-解數學or密碼學相關題目</br>
-1.Reverse the algorthm</br>
-2.Re-implement in Python</br>
-3.Ask Z3</br>
+<ol>**Z3**「聰明暴力破解」-解數學or密碼學相關題目</br></ol>
+<li>Reverse the algorthm</br></li>
+<li>Re-implement in Python</br></li>
+<li>Ask Z3</br></li>
 
 編譯安裝 z3 及 python binding</br>
 $ git clone https://github.com/Z3Prover/z3</br>
