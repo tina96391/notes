@@ -1,7 +1,7 @@
 # AIS3 DAY1
 download tools</br>
 **Exploit Generation**</br>
---Random testing</br>
+<li>Random testing</br>
 --Symbolic execution</br>
 Concolic execution</br>
 	.Concrete+Symbolic=Concolic</br>
