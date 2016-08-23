@@ -25,10 +25,48 @@
 apt-get install nasm gdb gcc binutils hexedit
 ```
 
-nasm a.asm -o a.o -felf32 //編譯
+#### nasm & objdump
+Assemble / disassemble shellcode
+```
+$ nano a.asm
+
+push 861096257
+mov eax, 4
+mov ebx, 1
+mov ecx, esp
+mov edx, 4
+int 0x80
+ret
+
+$ nasm a.asm -o a.o -felf32
+$ objdump -d -M intel a.o
+```
+nasm a.asm -o a.o -felf32 //組譯
 objdump -d -M intel a.o //執行
+then you can get 
+```
+a.o file format elf32-i386
+
+Disassembly of section .text
+
+00000000 <.text>:
+ 0:  68 41 49 53 53   push   0X33534941
+ 5:  b8 04 00 00 00   mov    eax,0x4
+ a:  bb 01 00 00 00   mov    ebx,0x1
+ f:  89 e1            mov    ecx,esp
+11:  ba 04 00 00 00   mov    edx,0x4
+16:  cd 80            int    0x80
+18:  c3               ret
+```
+#### Extract Shellcode
+```
+$ objcopy -O binary a.o code
+$ xxd -i code
+```
 objcopy -O binary a.o code //中間的shellcode抽出來
-xxd -i code //xxd code
+xxd -i code //可以產生0x__ 的code
+
+xxd code
 Run shellcode
 gcc test.c -o test -m32(在32bite環境下) -zexecstack(關掉保護)
 
