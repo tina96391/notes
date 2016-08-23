@@ -1,6 +1,8 @@
 # AIS3 DAY1 Exploit Generation
 download tools first</br>
-
+<!-- Note: wifi password: el.psy.congroo -->
+<!-- https://paper.dropbox.com/doc/0x00-AIS3-2016--0kMk7r4FaLXAtp4YSEQDn 中區-->
+<!-- https://paper.dropbox.com/doc/0x00-AIS3-2016--iEKJ6YlMhoQAdwCTnDJwn 南區 -->
 **Exploit Generation**
  - Random testing
  - Symbolic execution
