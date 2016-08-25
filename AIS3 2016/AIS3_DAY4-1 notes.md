@@ -41,14 +41,14 @@ client 						server
 client 						server
 				←OK←
 ```
-在console 上打document.cookie可以得到cookie
+在console 上打document.cookie可以得到cookie </br>
 或是在網址列上javascript:document.cookie也可以
 
 ### 0x04 Web Hacking & Security Techniques
 to web application </br>
-1. file upload
-2. SQL injection
-	Web DB
+1. file upload </br>
+2. SQL injection </br>
+	Web DB</br>
 3. SQL injection(in to DB)
 
 #### High Risk : file upload Vulunerability
@@ -69,10 +69,10 @@ Content: XSS Test
 ---
 
 Web security principle </br>
-1. Do not trust user input
-2. Do not give full check at client side
-3. Do not trust black-list filter rule
-	- white list 是符合規則的 and more Secure
+1. Do not trust user input </br>
+2. Do not give full check at client side </br>
+3. Do not trust black-list filter rule </br>
+	- white list 是符合規則的 and more Secure </br>
 
 ### 0x05 Exercise web hacking wargame
 
@@ -85,16 +85,16 @@ ID : ais3
 Password : ais3_anesra -->
 
 練習二
-使用Burp Suit
-設定好proxy後
-接到訊息後更改user成anesra後intercept off網頁就改成功了
+使用Burp Suit </br>
+設定好proxy後 </br>
+接到訊息後更改user成anesra後intercept off網頁就改成功了 </br>
 
 練習三
-1. 使用Burp Suit繞過去先輸入短的密碼後進到Burp Suit改成正確的
-2. 檢查原始碼後複製function，console上貼上把限制條件拿掉後就能改掉原本的程式碼了
-3. 也可以直接在Burp Suit案Forward然後改程式碼
+- 使用Burp Suit繞過去先輸入短的密碼後進到Burp Suit改成正確的
+- 檢查原始碼後複製function，console上貼上把限制條件拿掉後就能改掉原本的程式碼了
+- 也可以直接在Burp Suit案Forward然後改程式碼
 
 倒數第二
-403表示頁面存在 http://www.onesecurity.kr/AIS3/wargame/admin
-所以繼續 http://www.onesecurity.kr/AIS3/wargame/admin/login.asp
+403表示頁面存在 http://www.onesecurity.kr/AIS3/wargame/admin </br>
+所以繼續 http://www.onesecurity.kr/AIS3/wargame/admin/login.asp </br>
 帳號密碼輸入' or ''='就可以進去了
