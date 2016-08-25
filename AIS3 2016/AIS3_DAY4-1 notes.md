@@ -94,7 +94,7 @@ Password : ais3_anesra -->
 - 檢查原始碼後複製function，console上貼上把限制條件拿掉後就能改掉原本的程式碼了
 - 也可以直接在Burp Suit案Forward然後改程式碼
 
-倒數第二
+倒數第二 </br>
 403表示頁面存在 http://www.onesecurity.kr/AIS3/wargame/admin </br>
 所以繼續 http://www.onesecurity.kr/AIS3/wargame/admin/login.asp </br>
 帳號密碼輸入' or ''='就可以進去了
