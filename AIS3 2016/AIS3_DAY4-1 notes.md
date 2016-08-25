@@ -21,7 +21,7 @@ Web browser					 Server
 
 #### Get / POST Methods
 Get is more dangerous
-client→http://.....?id= →server (Get)
+client→http://.....?id= →server (Get) </br>
 client→http://..... →server (POST)
 
 Client side script： (用戶端可以更變)
@@ -32,34 +32,34 @@ PHP,JSP,ASP
  
 #### User auth
 ```
-	→ID:AAA,PW:BBBB→ 
-client 				server
-	→COOKIE:SESSIONID=CCCC←
+		→ID:AAA,PW:BBBB→ 
+client 						server
+		→COOKIE:SESSIONID=CCCC←
 	
 	
-	→COOKIE:SESSIONID=CCCC→
-client 				server
-		←OK←
+		→COOKIE:SESSIONID=CCCC→
+client 						server
+				←OK←
 ```
 在console 上打document.cookie可以得到cookie
 或是在網址列上javascript:document.cookie也可以
 
 ### 0x04 Web Hacking & Security Techniques
-to web application 
+to web application </br>
 1. file upload
 2. SQL injection
-Web DB
-1. SQL injection(in to DB)
+	Web DB
+3. SQL injection(in to DB)
 
 #### High Risk : file upload Vulunerability
-Ex:: Member Login(Vuln.) 
+Ex:: Member Login(Vuln.) </br>
 簡單破解方式，帳號密碼輸入[' or ''=']
 
 #### Middle Risk : XSS,File Download (Directory Traversal)
-EX:: Board
-name:test
-pwd:test
-subject:test
+EX:: Board </br>
+name:test </br>
+pwd:test </br>
+subject:test </br>
 Content: XSS Test
 ```
 <script>document.write(document.cookie)</script>
@@ -68,7 +68,7 @@ Content: XSS Test
 
 ---
 
-Web security principle 
+Web security principle </br>
 1. Do not trust user input
 2. Do not give full check at client side
 3. Do not trust black-list filter rule
